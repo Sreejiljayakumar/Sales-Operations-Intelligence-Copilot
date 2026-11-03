@@ -1,0 +1,67 @@
+﻿
+# ==========================================
+# DATA SCIENCE AND MACHINE LEARNING
+# ==========================================
+numpy
+pandas
+scipy
+scikit-learn
+imbalanced-learn
+joblib
+
+# ==========================================
+# DATA VISUALIZATION
+# ==========================================
+matplotlib
+seaborn
+plotly
+
+# ==========================================
+# JUPYTER AND NOTEBOOKS
+# ==========================================
+jupyter
+ipykernel
+
+# ==========================================
+# API AND VALIDATION
+# ==========================================
+fastapi
+uvicorn[standard]
+pydantic
+python-multipart
+
+# ==========================================
+# DASHBOARD
+# ==========================================
+streamlit
+
+# ==========================================
+# LLM AND RAG
+# ==========================================
+ollama
+sentence-transformers
+chromadb
+rank-bm25
+langchain
+langchain-community
+pypdf
+python-docx
+
+# ==========================================
+# DATA HANDLING
+# ==========================================
+openpyxl
+python-dotenv
+
+# ==========================================
+# HTTP AND UTILITIES
+# ==========================================
+requests
+httpx
+
+# ==========================================
+# TESTING AND CODE QUALITY
+# ==========================================
+pytest
+pytest-cov
+ruff

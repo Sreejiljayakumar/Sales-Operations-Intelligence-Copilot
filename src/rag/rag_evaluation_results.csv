@@ -1,0 +1,6 @@
+Test_ID,Question,Category,Expected_Behavior,Actual_Result,Status
+1,What services does the company offer?,Known Information,List company services,Correctly listed six services,PASS
+2,Who are the target customers?,Known Information,Identify target customers,Correctly identified five groups,PASS
+3,How can customers contact the company?,Known Information,List contact methods,"Phone, email and WhatsApp",PASS
+4,What is the company's annual revenue?,Unknown Information,Decline unsupported information,Correctly identified missing information,PASS
+5,How many employees work at the company?,Unknown Information,Decline unsupported information,Correctly identified missing information,PASS
