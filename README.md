@@ -1,12 +1,12 @@
 # Sales Operations Intelligence Copilot
 
-An AI-powered sales intelligence platform that combines Machine Learning, Retrieval-Augmented Generation (RAG), Large Language Models (LLMs), and workflow automation to support smarter sales operations.
+An AI-powered sales intelligence platform combining Machine Learning, Retrieval-Augmented Generation (RAG), Large Language Models (LLMs), and workflow automation to support smarter, data-driven sales operations.
 
 ## Overview
 
 The Sales Operations Intelligence Copilot helps businesses analyse sales leads, estimate conversion probability, retrieve company information, and support sales teams with AI-assisted recommendations.
 
-The project combines predictive analytics with a knowledge-based AI assistant and an interactive dashboard.
+The platform combines predictive analytics, a knowledge-based AI assistant, an interactive dashboard, REST APIs, and workflow automation.
 
 ## Key Features
 
@@ -40,7 +40,7 @@ The project combines predictive analytics with a knowledge-based AI assistant an
 
 The project uses a synthetic sales leads dataset containing 5,000 records and 11 columns.
 
-The prediction target is `converted`.
+**Prediction target:** `converted`
 
 ### Input Features
 
@@ -70,11 +70,18 @@ The prediction target is `converted`.
 9. Model evaluation
 10. Prediction pipeline development
 
-The preprocessing pipeline uses median imputation and standardisation for numerical features, and most-frequent imputation and one-hot encoding for categorical features.
+### Preprocessing
+
+The preprocessing pipeline uses:
+- Median imputation for numerical features
+- StandardScaler for numerical standardisation
+- Most-frequent imputation for categorical features
+- OneHotEncoder for categorical encoding
+- ColumnTransformer for combined preprocessing
 
 ## RAG and AI Knowledge Assistant
 
-The knowledge assistant retrieves information from company documents before generating answers.
+The knowledge assistant retrieves relevant information from company documents before generating responses.
 
 ### Components
 
@@ -86,26 +93,31 @@ The knowledge assistant retrieves information from company documents before gene
 - Hybrid retrieval
 - LLM-based response generation
 
-The assistant uses company knowledge documents covering company information, products and services, and sales policies.
+The assistant uses company knowledge documents covering:
+- Company profile
+- Products and services
+- Sales policies
 
 ## Application Architecture
 
-- **Streamlit:** User interface and sales analytics dashboard.
-- **FastAPI:** Backend API for predictions and question answering.
-- **Machine Learning:** Lead conversion prediction pipeline.
-- **RAG:** Company knowledge retrieval and answer generation.
-- **Ollama:** Local LLM inference.
-- **ChromaDB:** Persistent vector storage.
-- **n8n:** Workflow automation and human approval.
+| Component | Responsibility |
+|---|---|
+| Streamlit | Interactive sales dashboard |
+| FastAPI | Backend API |
+| Machine Learning | Lead conversion prediction |
+| RAG | Company knowledge retrieval |
+| Ollama | Local LLM inference |
+| ChromaDB | Persistent vector storage |
+| n8n | Workflow automation and human approval |
 
 ## API Endpoints
 
-| Endpoint | Purpose |
-|---|---|
-| `GET /` | API information |
-| `GET /health` | Health check |
-| `POST /predict` | Lead conversion prediction |
-| `POST /ask` | AI knowledge assistant |
+| Method | Endpoint | Purpose |
+|---|---|---|
+| GET | `/` | API information |
+| GET | `/health` | Health check |
+| POST | `/predict` | Lead conversion prediction |
+| POST | `/ask` | AI knowledge assistant |
 
 Interactive API documentation is available at `/docs` when the API is running.
 
@@ -138,12 +150,14 @@ Sales-Operations-Intelligence-Copilot/
 │   └── utils/
 │
 ├── tests/
+│
 ├── .dockerignore
 ├── .env.example
 ├── .gitignore
 ├── Dockerfile
 ├── docker-compose.yaml
-└── requirements.txt
+├── requirements.txt
+└── README.md
 ```
 
 ## Installation and Setup
@@ -155,7 +169,7 @@ Sales-Operations-Intelligence-Copilot/
 - Git
 - Ollama
 
-### Clone the repository
+### 1. Clone the repository
 
 ```bash
 git clone https://github.com/Sreejiljayakumar/Sales-Operations-Intelligence-Copilot.git
@@ -163,7 +177,7 @@ git clone https://github.com/Sreejiljayakumar/Sales-Operations-Intelligence-Copi
 cd Sales-Operations-Intelligence-Copilot
 ```
 
-### Create a virtual environment
+### 2. Create a virtual environment
 
 ```bash
 python -m venv .venv
@@ -175,19 +189,19 @@ Activate it on Windows:
 .venv\Scripts\Activate.ps1
 ```
 
-### Install dependencies
+### 3. Install dependencies
 
 ```bash
 pip install -r requirements.txt
 ```
 
-### Run with Docker Compose
+### 4. Run with Docker Compose
 
 ```bash
 docker compose -f docker-compose.yaml up -d --build
 ```
 
-### Access the local services
+### 5. Access the local services
 
 | Service | URL |
 |---|---|
@@ -202,6 +216,7 @@ The n8n service is managed separately from the project's Docker Compose services
 ## Testing
 
 The project includes API integration tests for:
+
 - API health checks
 - ML prediction
 - RAG question answering
@@ -229,10 +244,10 @@ Ensure the required API services are running before executing integration tests.
 - Improved model evaluation and calibration
 - Advanced lead scoring
 - Role-based access control
-- Production deployment
+- Production cloud deployment
 - Enhanced RAG evaluation and monitoring
 - Expanded workflow automation
 
 ## Project Purpose
 
-This project demonstrates how Machine Learning, Generative AI, RAG, APIs, dashboards, and workflow automation can work together to support data-driven sales operations.
+This project demonstrates how Machine Learning, Generative AI, RAG, APIs, interactive dashboards, and workflow automation can work together to support intelligent, data-driven sales operations.
