@@ -205,7 +205,7 @@ docker compose -f docker-compose.yaml up -d --build
 
 | Service | URL |
 |---|---|
-| Streamlit Dashboard | http://localhost:8501 |
+| Streamlit Dashboard | http://localhost:8502|
 | FastAPI | http://localhost:8000 |
 | API Documentation | http://localhost:8000/docs |
 | API Health | http://localhost:8000/health |
